@@ -11,15 +11,20 @@
     <link rel="stylesheet" href="{% static 'slam/styles/style.css' %}" type="text/css">
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-sticky-top navbar-expand-md">
-        <div class="container-fluid"><a href="{% url 'dashboard' %}" class="navbar-brand text-danger"><strong>SLAMSMASH</strong></a><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">            
+    <nav class="navbar navbar-light navbar-expand-md" style="background-color: #e3f2fd;">
+        <div class="container-fluid"><a href="{% url 'dashboard' %}" class="navbar-brand">SlamBook</a><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            {% if user.is_authenticated %}
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav mx-auto">
+                    <li role="presentation" class="nav-item"><a href="{% url 'generate_pdf' %}" class="nav-link">GENERATE SLAMBOOK</a></li>
+                </ul>
                 <ul class="nav navbar-nav">
-                    <li class="dropdown"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link dropdown-toggle" style="color:rgb(220,53,69);">{{ user.username }}</a>
+                    <li class="dropdown"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link dropdown-toggle">{{ user.username }}</a>
                         <div role="menu" class="dropdown-menu"><a role="presentation" href="{% url 'profile' %}" class="dropdown-item">Profile</a><a role="presentation" href="#" class="dropdown-item">Settings</a><a role="presentation" href="{% url 'logout' %}" class="dropdown-item">Logout</a></div>
                     </li>
                 </ul>
             </div>
+            {% endif %}
         </div>
     </nav>
     {% block body %}
