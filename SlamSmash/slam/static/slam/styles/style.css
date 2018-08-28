@@ -1,0 +1,20 @@
+.row.custom{
+    border-color: black;
+    border: 2px solid;
+    margin: 3px;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+
+.container.custom{
+    margin: 10px;
+}
+
+.container.custom.profile{
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-top: 10px;
+    border-color: black;
+    border: 2px solid;
+    justify-content: center;
+}

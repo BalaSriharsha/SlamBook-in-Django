@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ user }}-{{ slam.my_name }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Name</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_name }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>NickName</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_nickname }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Address</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_address }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Mobile Number</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_mobile_number }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Email Id</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_email }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>BirthDay</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_birth_day }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Zodiac Sign</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_zodiac_sign }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Crushes</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_crushes }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Happiest Moment</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_happiest_moment }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Favourite Dishes</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_dishes }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Favourite Sports</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_sports }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Favourite Places</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_places }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Favourite Actor</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_actor }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Favourite Actress</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_actress }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Favourite Website</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_webiste }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Favourite Song</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_favourite_song }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Ideal</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.my_ideal }}</p>
+        </div>
+    </div>
+    <div class="row custom">
+        <div class="col-md-6">
+            <p class="text-center"><strong>My Opinion About You</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center">{{ slam.opinion_about_you }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="text-center"><strong>This slam was written on {{ slam.date }}</strong></p>
+        </div>
+        <div class="col-md-6">
+                <p class="text-left"><button class="btn btn-warning"><a href="{% url 'dashboard' %}">Go back to Dashboard</a></button></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

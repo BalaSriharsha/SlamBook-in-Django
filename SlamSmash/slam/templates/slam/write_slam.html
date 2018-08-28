@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Write Slam{% endblock %}
+
+{% block body %}
+<div class="container"><br>
+    <form class="form-group" method="POST">
+        {% csrf_token %}
+        {{ user_name }}
+        {{ form.my_name }}<br>
+        {{ form.my_nickname }}<br>
+        {{ form.my_address }}<br>
+        {{ form.my_mobile_number }}<br>
+        {{ form.my_email }}<br>
+        {{ form.my_birth_day }}<br>
+        {{ form.my_zodiac_sign }}<br>
+        {{ form.my_crushes }}<br>
+        {{ form.my_happiest_moment }}<br>
+        {{ form.my_favourite_dishes }}<br>
+        {{ form.my_favourite_sports }}<br>
+        {{ form.my_favourite_places }}<br>
+        {{ form.my_favourite_actor }}<br>
+        {{ form.my_favourite_actress }}<br>
+        {{ form.my_favourite_webiste }}<br>
+        {{ form.my_favourite_festival }}<br>
+        {{ form.my_favourite_song }}<br>
+        {{ form.my_ideal }}<br>
+        {{ form.opinion_about_you }}<br>
+        <p class="text-center"><button class="btn btn-primary" type="submit">Submit</button></p>
+    </form>
+</div>
+{% endblock %}

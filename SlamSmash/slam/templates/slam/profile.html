@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+<div class="container custom profile">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Username</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center"><strong>{{ user.username }}</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Firstname</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center"><strong>{{ user.first_name }}</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Lastname</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center"><strong>{{ user.last_name }}</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="text-center"><strong>Email</strong></p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center"><strong>{{ user.email }}</strong></p>
+        </div>
+    </div>
+</div>
+<p class="text-center" style="margin:5px"><button class="btn btn-success">Edit Profile</button></p>
+{% endblock %}
